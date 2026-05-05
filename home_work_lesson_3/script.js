@@ -32,3 +32,6 @@ console.log('Bigint Value:',typeof bigIntValue);
 const number = '10369';
 
 console.log(number.split('').join(' '));
+
+
+
