@@ -2,7 +2,7 @@
 const phoneBook = {
     contacts: [
         {
-            name: 'John',
+            name : 'John',
             phone: 123123123,
             email: 'john@gmail.com'
         },
@@ -12,13 +12,13 @@ const phoneBook = {
             email: 'ann@gmail.com'
         },
         {
-            name: 'Alex',
+            name: 'Alex' ,
             phone: 231231231,
             email: 'alex@gmail.com'
         }
     ],
 
-    getContactByName: function (nameToFind) {
+    getContactByName: function(nameToFind) {
         for (const contact of phoneBook.contacts) {
             if (nameToFind === contact.name) {
                 console.log(nameToFind);
