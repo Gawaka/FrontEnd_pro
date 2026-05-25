@@ -7,11 +7,15 @@ function userMessage() {
 
         let userNumber = Number(userInput);
 
-        if (userNumber >= 100) {
+        if (userNumber === 100) {
             alert('Ви порались!');
             break;
+        } else if (userNumber > 100 || isNaN(userNumber)) {
+            break;
         }
-    }
+    };
+    
+    console.log(`Останнім ви ввели: ${userInput}`);
 };
 
 userMessage();
