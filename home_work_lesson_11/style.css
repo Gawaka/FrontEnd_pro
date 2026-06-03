@@ -13,8 +13,7 @@
     color: red;
 } */
 
-/* 2 task */
-
+/* 2 task
 .image-wrapper {
     display: flex;
     justify-content: center;
@@ -59,4 +58,49 @@
 
     button:active {
         transform: scale(0.97);   
-    }
+    } */
+
+
+/* task 3  */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pythagoras-table {
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pythagoras-table td, .pythagoras-table th {
+    border: 1px solid #ddd;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 0.2s;
+}
+
+.pythagoras-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.pythagoras-table td.header-col {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.pythagoras-table td:not(.header-col) {
+    background-color: #fafafa;
+}
+
+.pythagoras-table td:hover {
+    background-color: #ffeb3b;
+    cursor: pointer;
+    font-weight: bold;
+}
