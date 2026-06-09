@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form class="form" action="" novalidate>
+        <input
+            id="name"
+            type="text" 
+            tabindex="1" 
+            placeholder="name" 
+            required>
+        <textarea 
+            name="Message" 
+            id="message">
+        </textarea>
+        <p>How to answer you?</p>
+        <input
+            id="email" 
+            type="email" 
+            tabindex="2" 
+            placeholder="email" 
+            required>
+        <input
+            id="phone" 
+            type="tel"
+            tabindex="3" 
+            placeholder="phone" 
+            data-prefix="+380 "
+            required>
+            <button>Submit</button>
+    </form>
+    <script src="script01.js"></script>
+</body>
+</html>
