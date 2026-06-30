@@ -1,0 +1,46 @@
+body {
+    background-color: cadetblue;
+}
+
+.char-card {
+    border: 2px solid wheat;
+    height: 550px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    background: steelblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    /* justify-content: center; */
+    margin-top: 5%;
+}
+
+h2 {
+    color: wheat;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+button {
+    color: whitesmoke;
+    cursor: pointer;
+    width: 80px;
+    height: 25px;
+    background-color: slategrey;
+    font-weight: 700;
+}
+
+button:hover{
+    color: black;
+    background-color: whitesmoke;
+    transition: background-color 0.9s ease-in-out;
+}
+
+.char-img {
+    width: 200px;
+    height: 230px;
+    border: 2px solid wheat;
+    background-color: wheat;
+}
