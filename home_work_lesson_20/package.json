@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
+    "build": "babel src -d lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -10,7 +11,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@babel/cli": "^7.29.7",
+    "@babel/core": "^7.29.7",
     "bootstrap": "^5.3.8",
     "jquery": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.29.7"
   }
 }
