@@ -1,0 +1,87 @@
+$bg-primary: #66deb2;
+$bg-white: #fff;
+$accent-color: #0be69d;
+$border-color: #ccc;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.2;
+    font-size: 18px;
+    background-color: $bg-primary;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.custom-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 75%;
+}
+
+.form {
+    background: $bg-white;
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+
+    &__input {
+        min-height: 25px;
+        padding: 10px;
+        width: 100%;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    &__btn {
+        background: $accent-color;
+        border: none;
+        cursor: pointer;
+        width: 100px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+}
+
+.todo-item {
+    display: flex;
+    padding: 10px;
+    background: $bg-white;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &--checked {
+        text-decoration: line-through;
+        opacity: 0.6;
+    }
+
+    &__description {
+        flex-grow: 1;
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+    &__delete {
+        background: $accent-color;
+        border: none;
+        cursor: pointer;
+        width: 95px;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+}
