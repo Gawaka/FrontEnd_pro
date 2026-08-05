@@ -50,6 +50,24 @@ export class HomePage extends Component {
         this.setState({winner: currentWinner});
     };
 
+    resetVotes = () => {
+        localStorage.removeItem('hero_votes');
+
+        this.setState({
+            heroClassList: {
+                barbarian: 0,
+                bard: 0,
+                druid: 0,
+                paladin: 0,
+                ranger: 0,
+                rogue: 0,
+                warlock: 0,
+                wizard: 0
+            },
+            winner: null
+        });
+    };
+
     render() {
         return (
             <>
@@ -93,11 +111,19 @@ export class HomePage extends Component {
                         text={'Show result'}
                         onClick={this.showResult}
                     />
+
                         {this.state.winner && (
-                            <div className="winner">
-                                <h2>Winner is: {this.state.winner}</h2>
-                                <img src={`/${this.state.winner}.svg`} alt="winner" />
-                            </div>
+                            <>
+                                <div className="winner">
+                                    <h2>Winner is: {this.state.winner}</h2>
+                                    <img src={`/${this.state.winner}.svg`} alt="winner" />
+                                </div>
+                                <Button 
+                                    className="button"
+                                    text={'Reset votes'}
+                                    onClick={this.resetVotes}
+                                />
+                            </>
                         )}
                 </div>
             </>
