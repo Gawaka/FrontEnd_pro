@@ -1,0 +1,37 @@
+button {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+
+    color: #ffffff;
+    background-color: #4f46e5;
+    border: none;
+    border-radius: 8px;
+    
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+        background-color: #4338ca;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+    &:disabled {
+        background-color: #9ca3af;
+        color: #e5e7eb;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+    }
+}
