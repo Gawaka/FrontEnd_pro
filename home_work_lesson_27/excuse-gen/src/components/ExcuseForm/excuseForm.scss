@@ -1,0 +1,87 @@
+@import '../../styles/variables';
+
+.excuse-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    background: var(--bg-surface);
+    padding: 6px;
+    border-radius: $radius-full;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    margin-bottom: $space-xl;
+
+    @include mobile {
+        flex-direction: column;
+        border-radius: $radius-md;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        gap: $space-sm;
+    }
+}
+
+.btn-generate {
+    background-color: var(--accent-main);
+    color: var(--accent-text);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 40px;
+    border-radius: $radius-full;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px 0 rgba(139, 92, 246, 0.39);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    margin-bottom: $space-xl;
+
+    &:hover {
+        transform: translateY(-2px);
+        background-color: var(--accent-hover);
+    }
+}
+
+.input-field {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: var(--text-main);
+    outline: none;
+
+    &::placeholder { color: var(--text-muted); }
+
+    @include mobile {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-light);
+        border-radius: $radius-md;
+        padding: 14px;
+    }
+}
+
+.btn-add {
+    background: var(--bg-body);
+    color: var(--text-main);
+    border: 1px solid var(--border-light);
+    padding: 10px 24px;
+    border-radius: $radius-full;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover { background: var(--border-light); }
+
+    @include mobile {
+        border-radius: $radius-md;
+        padding: 14px;
+    }
+}

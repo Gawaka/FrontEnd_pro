@@ -1,0 +1,45 @@
+import { Link, NavLink } from 'react-router-dom';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import './header.scss';
+
+function Header() {
+    return (
+        <header className="header">
+            <Link to="/" className="logo">
+                Excuse<span>Gen</span>
+            </Link>
+
+            <ul className="nav-links">
+                <li>
+                <NavLink 
+                    to="/" 
+                    className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                >
+                    Головна
+                </NavLink>
+                </li>
+                <li>
+                <NavLink 
+                    to="/about" 
+                    className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                >
+                    Про мене
+                </NavLink>
+                </li>
+                <li>
+                <NavLink 
+                    to="/contacts" 
+                    className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                >
+                    Контакти
+                </NavLink>
+                </li>
+            </ul>
+
+            {/* Наш незалежний компонент для теми */}
+            <ThemeToggle/>
+        </header>
+    );
+};
+
+export default Header
