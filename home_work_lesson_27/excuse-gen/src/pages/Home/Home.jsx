@@ -3,8 +3,6 @@ import ExcuseForm from "../../components/ExcuseForm/ExcuseForm";
 import ExcuseCard from "../../components/ExcuseCard/ExcuseCard";
 import mockExcuses from "../../data/mockExcuses";
 
-import '../Home/home.scss';
-
 function Home(props) {
     const [randomExcuse, setRandomExcuse] = useState(null);
     const [excuseList, setExcuseList] = useState(()=> {

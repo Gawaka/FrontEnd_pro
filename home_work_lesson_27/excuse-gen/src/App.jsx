@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom';
-import Home from '../src/pages/Home/Home';
-import About from '../src/pages/About/About';
-import Contacts from '../src/pages/Contacts/Contacts';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Contacts from './pages/Contacts/Contacts';
 import MainLayout from './layouts/MainLayout';
 import './App.scss'
 
