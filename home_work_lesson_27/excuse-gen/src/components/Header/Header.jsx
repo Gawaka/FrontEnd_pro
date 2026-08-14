@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import './header.scss';
+import RegisterPage from '../../pages/RegisterPage/RegisterPage';
 
 function Header() {
     return (
@@ -34,9 +35,15 @@ function Header() {
                     Контакти
                 </NavLink>
                 </li>
+                <li>
+                <NavLink 
+                    to="/register" 
+                    className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                >
+                    Реєстрація
+                </NavLink>
+                </li>
             </ul>
-
-            {/* Наш незалежний компонент для теми */}
             <ThemeToggle/>
         </header>
     );
