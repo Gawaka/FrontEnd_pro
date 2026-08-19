@@ -33,7 +33,6 @@ function ExcuseForm({onSubmit}) {
                 </button>
             </form>
         </div>
-
     );
 };
 

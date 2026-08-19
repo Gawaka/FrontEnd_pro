@@ -1,55 +1,40 @@
 import { useState, useEffect } from "react";
-import ExcuseForm from "../../components/ExcuseForm/ExcuseForm";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteExcuse, likeExcuse, disLikeExcuse } from "../../store/excusesSlice";
 import ExcuseCard from "../../components/ExcuseCard/ExcuseCard";
-import mockExcuses from "../../data/mockExcuses";
 
 function Home(props) {
+    const dispatch = useDispatch();
+    const excuseList = useSelector((state) => state.excuses.list);
     const [randomExcuse, setRandomExcuse] = useState(null);
-    const [excuseList, setExcuseList] = useState(()=> {
-        const savedExcuses = localStorage.getItem('myExcuses');
-        if (savedExcuses) {
-            return JSON.parse(savedExcuses);
-        }
-        return mockExcuses;
-    });
-
-    useEffect(()=> {
-        localStorage.setItem('myExcuses', JSON.stringify(excuseList));
-    }, [excuseList]);
 
     const genRandomExcuse = ()=> {
         const randomIndex = Math.floor(Math.random() * excuseList.length);
-        setRandomExcuse(excuseList[randomIndex])
-    };
-
-    const handleExcuseAdd = (text) => {
-    const newExcuse = {
-        id: Date.now(),
-        text: text
-    };
-    setExcuseList((prevList) => [...prevList, newExcuse]);
+        setRandomExcuse(excuseList[randomIndex]);
     };
 
     const handleExcuseDelete = (indexToDelete)=> {
-        setExcuseList((prevList)=> prevList.filter((excuse) => excuse.id !== indexToDelete));
+        dispatch(deleteExcuse(indexToDelete))
         setRandomExcuse(null);
     };
 
+    const freshExcuse = randomExcuse ? excuseList.find(e => e.id === randomExcuse.id) : null;
+
     return(
         <>
-            <ExcuseForm
-                onSubmit={handleExcuseAdd}
-            />
             <button 
                 className="btn-generate"
                 onClick={genRandomExcuse}
             >
-                ✨ Згенерувати відмазку
+                ✨ Отримати відмазку
             </button>
-            {randomExcuse ? 
+            {freshExcuse ? 
                 <ExcuseCard
-                    text={randomExcuse.text}
-                    onDelete={()=> handleExcuseDelete(randomExcuse.id)}
+                    text={freshExcuse.text}
+                    onDelete={()=> handleExcuseDelete(freshExcuse.id)}
+                    likes={freshExcuse.likes}
+                    onLike={()=> dispatch(likeExcuse(freshExcuse.id))}
+                    onDislike={()=> dispatch(disLikeExcuse(freshExcuse.id))}
                 /> : null
             }
         </>

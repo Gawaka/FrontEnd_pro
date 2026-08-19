@@ -21,10 +21,10 @@ function Header() {
                 </li>
                 <li>
                 <NavLink 
-                    to="/about" 
+                    to="/addExcuse" 
                     className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
                 >
-                    Про мене
+                    Створити відмазку
                 </NavLink>
                 </li>
                 <li>

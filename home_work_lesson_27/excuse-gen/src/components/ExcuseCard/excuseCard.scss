@@ -10,6 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 5px;
     box-shadow: var(--shadow-soft);
     text-align: left;
     transition: transform 0.2s;
@@ -26,6 +27,13 @@
     font-weight: 500;
     padding-right: $space-md;
     color: var(--text-main);
+}
+
+.card-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
 }
 
 .btn-icon {
@@ -53,4 +61,18 @@
         color: #FCA5A5;
         }
     }
+}
+
+.like-dislike {
+    border-radius: 50%;
+    background-color: var(--bg-input);
+    border: none;
+    outline: none;
+    padding: 7px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.like-dislike:hover {
+    transform: scale(1.2);
 }
