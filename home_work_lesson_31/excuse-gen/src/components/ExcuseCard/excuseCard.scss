@@ -1,0 +1,78 @@
+@import '../../styles/variables';
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: $radius-md;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    box-shadow: var(--shadow-soft);
+    text-align: left;
+    transition: transform 0.2s;
+    margin-bottom: $space-md;
+    margin-top: 10px;
+
+    &:hover {
+        transform: scale(1.01);
+    }
+}
+
+.card-text {
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: $space-md;
+    color: var(--text-main);
+}
+
+.card-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.btn-icon {
+    background: var(--bg-input);
+    color: var(--text-muted);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+
+    &:hover {
+        background: #FEE2E2;
+        color: #EF4444;
+    }
+
+    :global(.theme-dark) & {
+        &:hover {
+        background: #7F1D1D; 
+        color: #FCA5A5;
+        }
+    }
+}
+
+.like-dislike {
+    border-radius: 50%;
+    background-color: var(--bg-input);
+    border: none;
+    outline: none;
+    padding: 7px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.like-dislike:hover {
+    transform: scale(1.2);
+}

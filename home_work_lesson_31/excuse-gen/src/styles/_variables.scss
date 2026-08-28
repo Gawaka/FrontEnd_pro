@@ -1,0 +1,65 @@
+
+// Типографіка та радіуси
+$font-family: 'Inter', system-ui, -apple-system, sans-serif;
+$radius-full: 9999px;
+$radius-lg: 24px;
+$radius-md: 16px;
+
+// Відступи
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 40px;
+
+// Breakpoints для адаптиву
+$bp-mobile: 640px;
+$bp-tablet: 768px;
+
+// --- МІКСИНИ (Шаблони коду) ---
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin mobile {
+    @media (max-width: #{$bp-mobile}) {
+    @content;
+    }
+}
+
+
+// --- CSS ЗМІННІ (Кольори для динамічних тем) ---
+:root, .theme-light {
+    --bg-body: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --bg-surface-blur: rgba(255, 255, 255, 0.8);
+    --bg-input: #F1F5F9;
+    
+    --text-main: #0F172A;
+    --text-muted: #64748B;
+    
+    --accent-main: #8B5CF6;
+    --accent-hover: #7C3AED;
+    --accent-text: #FFFFFF;
+    
+    --border-light: #E2E8F0;
+    --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+}
+
+.theme-dark {
+    --bg-body: #0F172A;
+    --bg-surface: #1E293B;
+    --bg-surface-blur: rgba(30, 41, 59, 0.8);
+    --bg-input: #0F172A;
+    
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
+    
+    --accent-main: #10B981;
+    --accent-hover: #059669;
+    --accent-text: #0F172A;
+    
+    --border-light: #334155;
+    --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}

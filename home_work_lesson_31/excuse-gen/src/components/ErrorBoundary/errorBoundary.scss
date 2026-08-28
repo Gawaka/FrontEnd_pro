@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+
+.error-boundary {
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+    padding: $space-xl;
+    margin: $space-xl auto;
+    max-width: 500px;
+    background-color: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: $radius-lg;
+}
+
+.error-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #EF4444;
+    margin-bottom: $space-md;
+}
+
+.error-msg {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-family: monospace;
+    background-color: var(--bg-surface);
+    padding: $space-sm $space-md;
+    border-radius: $radius-md;
+    margin-bottom: $space-lg;
+    word-break: break-word;
+}
+
+.btn-secondary {
+    background: gray;
+    color: var(--text-main);
+    border: 2px solid black;
+    padding: 10px 24px;
+    border-radius: $radius-full;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        background: var(--border-light);
+    }
+}
