@@ -1,23 +1,24 @@
-import { Routes, Route, Link } from 'react-router';
-
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Contacts from './pages/Contacts';
-import MyButton from './components/MyButton';
-import './App.css'
+import { Box } from '@mui/material';
 
 function App() {
-
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contacts" element={<Contacts />} />
-      </Routes>
-      {/* <MyButton text={'Hello world'}/> */}
+      <Header />
+      
+      <Box sx={{ maxWidth: 1040, mx: 'auto', p: { xs: 2, md: 4 }, display: 'flex', flexDirection: 'column', gap: 3 }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contacts" element={<Contacts />} />
+        </Routes>
+      </Box>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
