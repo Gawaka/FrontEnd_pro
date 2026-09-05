@@ -57,6 +57,20 @@ export default function Header() {
                     borderBottom: '1px solid rgba(0,0,0,0.02)'
                 }}
             >
+                <Drawer
+                    variant="temporary"
+                    open={mobileOpen}
+                    onClose={handleDrawerToggle}
+                    ModalProps={{
+                        keepMounted: true,
+                    }}
+                    sx={{
+                        display: { xs: 'block', md: 'none' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
+                    }}
+                >
+                    {drawer}
+                </Drawer>
                 <Toolbar sx={{ justifyContent: 'space-between', maxWidth: 1040, width: '100%', mx: 'auto' }}>
                     <Typography 
                         variant="h6" 
