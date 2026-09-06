@@ -2,7 +2,6 @@ import { Box, Typography, Card, CardContent, Chip, Stack, Avatar} from '@mui/mat
 import SectionTitle from '../components/SectionTitle';
 import photo from '../assets/photo.jpg';
 
-
 export default function Hero() {
     const skills = [
         'React', 'TypeScript', 'JavaScript', 
