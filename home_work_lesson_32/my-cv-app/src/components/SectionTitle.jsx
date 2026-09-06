@@ -1,7 +1,7 @@
 import { Typography, Box } from '@mui/material';
 
 
-const SectionTitle = ({ title }) => (
+const SectionTitle = ({ title, bgColor}) => (
     <Typography 
     variant="h5" 
     component="h2" 
@@ -14,7 +14,7 @@ const SectionTitle = ({ title }) => (
         color: 'text.primary'
     }}
     >
-    <Box component="span" sx={{ width: 12, height: 12, borderRadius: '50%', bgcolor: 'warning.main' }} />
+    <Box component="span" sx={{ width: 12, height: 12, borderRadius: '50%', bgcolor: bgColor }} />
     {title}
     </Typography>
 );

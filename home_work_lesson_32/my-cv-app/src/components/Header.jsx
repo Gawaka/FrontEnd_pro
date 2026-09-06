@@ -6,7 +6,6 @@ import { NavLink, useLocation } from 'react-router-dom';
 const navItems = [
     { label: 'Головна', path: '/' },
     { label: 'Портфоліо', path: '/portfolio' },
-    { label: 'Контакти', path: '/contacts' }
 ];
 
 export default function Header() {
@@ -43,6 +42,7 @@ export default function Header() {
                 );
             })}
             </List>
+
         </Box>
     );
 
@@ -77,13 +77,13 @@ export default function Header() {
                         component={NavLink} 
                         to="/"
                         sx={{ 
-                        fontWeight: 700, 
+                        fontWeight: 700,
                         color: 'text.primary', 
                         textDecoration: 'none',
                         letterSpacing: '0.5px'
                         }}
                     >
-                    Front<Box component="span" sx={{ color: 'primary.main' }}>End</Box>
+                    Front<Box component="span" sx={{ color: 'primary.main' }}>End CV</Box>
                     </Typography>
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
                         {navItems.map((item) => {

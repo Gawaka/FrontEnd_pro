@@ -76,7 +76,7 @@ export default function Hero() {
                 </CardContent>
             </Card>
             <Box>
-                <SectionTitle title="Досвід та Проєкти" />
+                <SectionTitle title="Досвід та Проєкти" bgColor={'warning.main'}/>
                 <Card 
                     elevation={0} 
                     sx={{ 
@@ -129,7 +129,7 @@ export default function Hero() {
                 </Card>
             </Box>
             <Box>
-                <SectionTitle title="Освіта"/>
+                <SectionTitle title="Освіта" bgColor={'warning.main'}/>
                 <Stack spacing={3}>
                     <Card 
                         elevation={0} 
@@ -146,10 +146,10 @@ export default function Hero() {
                             mb={1}
                         >
                             <Typography fontWeight={700} color="text.primary">
-                                "Hillel IT scooll" - курс "Front-end розробник"
+                                "Hillel IT scooll" - курс "Front-end Pro"
                             </Typography>
                             <Typography variant="body2" color="warning.main" fontWeight={700}>
-                                2025 - 2026
+                                2026
                             </Typography>
                         </Stack>
                         <Typography variant="body2" color="text.secondary">
